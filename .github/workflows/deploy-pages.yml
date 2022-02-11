@@ -50,7 +50,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment: github-pages
+    environment:
+      name: github-pages
+      url: https://f2monkey.github.io
     steps:
       - name: deploy pages
         uses: actions/deploy-pages@v1
